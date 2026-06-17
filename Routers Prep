@@ -23,10 +23,11 @@ router-id 1.1.1.1
 int range gi1/2
 ip ospf 1 area 0
 !                                 
-username mariusz priv 15 password 
+username mariusz priv 15 password cisco
 ip domain-name abc.com           
-crypto key gen rsa modo 1024     
-line vty 0                        
+crypto key gen rsa modo 1024
+ip ssh ver 2
+line vty 0 4                       
 login local
 trans in all	
 !
@@ -62,12 +63,14 @@ router-id 2.2.2.2
 int range gi1/2
 ip ospf 1 area 0
 ! enale ssh
-username mariusz priv 15 password 
-ip domain-name abc.com
+!                                 
+username mariusz priv 15 password cisco
+ip domain-name abc.com           
 crypto key gen rsa modo 1024
-line vty 0
+ip ssh ver 2
+line vty 0 4                       
 login local
-trans in all
+trans in all	
 !
 ! enable netconf
 netconf ssh
@@ -79,36 +82,50 @@ wr
 # Router_3
 conf t
 hostname IOS_3
-int gi1
-ip add 10.255.1.1 255.255.255.0
+int gi0/1
+ip add 13.0.0.3 255.255.255.0
 no sh
-int gi2
-ip add 12.0.0.1 255.255.255.0
+int gi0/2
+ip add 23.0.0.3 255.255.255.0
 no sh
-!
-username mariusz priv 15 password 
-ip domain-name abc.com
+!                               
+username mariusz priv 15 password cisco
+ip domain-name abc.com           
 crypto key gen rsa modo 1024
-line vty 0
+ip ssh ver 2
+line vty 0 4                       
 login local
 trans in all	
-
+!
+! enable netconf
+netconf ssh
+netconf-yang
+end
+wr
+!
 =======================================================
 # Router 4
 conf t
 hostname IOS_4
-int gi1
-ip add 10.255.1.1 255.255.255.0
+int gi0/1
+ip add 14.0.0.4 255.255.255.0
 no sh
-int gi2
-ip add 12.0.0.1 255.255.255.0
+int gi0/2
+ip add 23.0.0.4 255.255.255.0
 no sh
-
-!
-username mariusz priv 15 password 
-ip domain-name abc.com
+!                                 
+username mariusz priv 15 password cisco
+ip domain-name abc.com           
 crypto key gen rsa modo 1024
-line vty 0
+ip ssh ver 2
+line vty 0 4                       
 login local
-trans in all
+trans in all	
+!
+! enable netconf
+netconf ssh
+netconf-yang
+end
+wr
+!
 =======================================================
