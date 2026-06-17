@@ -1,1 +1,86 @@
-
+( # Router_1 ) | ( # Router_2 ) | ( # Router_3 ) | ( # Router_4 ) | 
+conf t
+hostname IOSXE_1
+int gi1
+ip add 10.255.1.1 255.255.255.0
+no sh
+int gi2
+ip add 12.0.0.1 255.255.255.0
+no sh
+int gi3
+ip add 13.0.0.1 255.255.255.0
+no sh
+int gi4
+ip add 14.0.0.1 255.255.255.0
+no sh
+!
+username mariusz priv 15 password 
+ip domain-name abc.com
+crypto key gen rsa modo 1024
+line vty 0
+login local
+trans in all	# Router_2
+conf t
+hostname IOSXE_2
+int gi1
+ip add 10.255.1.2 255.255.255.0
+no sh
+int gi2
+ip add 12.0.0.2 255.255.255.0
+no sh
+int gi3
+ip add 23.0.0.2 255.255.255.0
+no sh
+int gi4
+ip add 24.0.0.2 255.255.255.0
+no sh
+!
+username mariusz priv 15 password 
+ip domain-name abc.com
+crypto key gen rsa modo 1024
+line vty 0
+login local
+trans in all
+# Router_3
+conf t
+hostname IOSXE_3
+int gi1
+ip add 10.255.1.1 255.255.255.0
+no sh
+int gi2
+ip add 12.0.0.1 255.255.255.0
+no sh
+int gi3
+ip add 13.0.0.1 255.255.255.0
+no sh
+int gi4
+ip add 14.0.0.1 255.255.255.0
+no sh
+!
+username mariusz priv 15 password 
+ip domain-name abc.com
+crypto key gen rsa modo 1024
+line vty 0
+login local
+trans in all	# Router_4
+conf t
+hostname IOSXE_3
+int gi1
+ip add 10.255.1.1 255.255.255.0
+no sh
+int gi2
+ip add 12.0.0.1 255.255.255.0
+no sh
+int gi3
+ip add 13.0.0.1 255.255.255.0
+no sh
+int gi4
+ip add 14.0.0.1 255.255.255.0
+no sh
+!
+username mariusz priv 15 password 
+ip domain-name abc.com
+crypto key gen rsa modo 1024
+line vty 0
+login local
+trans in all
