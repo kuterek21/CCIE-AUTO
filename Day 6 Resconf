@@ -1,1 +1,10 @@
+//Objective is to configure OSPF using Netconf (VSCode)
+//- write a script: deploy.py
+-------------------------------------
+import os
+from ncclient import manager
+from ncclienty.operations import RPCEerror
+// define few funcions:
+def process_template(tempate_name: str) -> bool:
+
 
