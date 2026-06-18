@@ -1,6 +1,10 @@
 python -m vnev .vnev
 source .vnev/bin/activate
-
+----
+python3 -m venv [ PROJECT_NAME ]
+source [ PROJECT_NAME ]/bin/activate
+deactivate
+----
 # ouo install pop wheel setuptools --upgrade
 pip install pip wheel setuptools --upgrade
 pip install yangsuite
