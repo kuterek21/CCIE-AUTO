@@ -9,6 +9,11 @@ deactivate
 pip install pip wheel setuptools --upgrade
 pip install yangsuite
 
+--- first start ---
+
+yangsuite
+
+
 # default port 8480
 
 to start: -> localhost:8480
