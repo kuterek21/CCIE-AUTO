@@ -1,0 +1,10 @@
+python -m vnev .vnev
+source .vnev/bin/activate
+
+# ouo install pop wheel setuptools --upgrade
+pip install pip wheel setuptools --upgrade
+pip install yangsuite
+
+# default port 8480
+
+to start: -> localhost:8480
