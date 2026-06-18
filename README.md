@@ -1,3 +1,4 @@
+# [CCNP Auto Link](https://github.com/kuterek21/Python_for_Cisco/blob/main/README.md)
 # CCIE-AUTO
 
  - [Routers Config](https://github.com/kuterek21/CCIE-AUTO/blob/main/Routers%20Prep)
