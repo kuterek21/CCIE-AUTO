@@ -1,11 +1,6 @@
 <table>
 <tr>
-<th>Router_1 (IOSXE_1)</th>
-<th>Router_2 (IOSXE_2)</th>
-</tr>
-<tr>
-<td>
-! Router_1
+<th>! Router_1
 conf t
 hostname IOSXE_1
 int gi1
@@ -44,9 +39,8 @@ netconf-yang
 end
 wr
 !
-</td>
-<td>
-! Router_2
+</th>
+<th>! Router_2
 conf t
 hostname IOSXE_2
 int gi1
@@ -75,5 +69,12 @@ trans in all
 netconf ssh
 netconf-yang
 end
-wr
+wr</th>
+</tr>
+<tr>
+<td>
+
+</td>
+<td>
+
 !
