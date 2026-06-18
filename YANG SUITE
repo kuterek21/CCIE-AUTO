@@ -8,3 +8,15 @@ pip install yangsuite
 # default port 8480
 
 to start: -> localhost:8480
+==============================
+pull all the data models into young suite
+-
+
+setup-> device profile-> 
+create new device -> Name, ip address, username, password
+under netconf:
+  cisco ios xe
+--------
+Select a device profile
+-
+-> Create default Repository and Yangset
